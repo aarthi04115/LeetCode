@@ -5,18 +5,16 @@ class Solution {
         Arrays.sort(nums);
         int small = nums[0];
         int larg = nums[n-1];
+        HashSet<Integer>set = new HashSet<>();
+        for(int x : nums){
+            set.add(x);
+        }
         for(int i=small; i<larg; i++){
-            boolean found = false;
-            for(int x : nums){
-                if(x == i){
-                    found = true;
-                    break;
-                }
-            }
-            if(!found){
+            if(!set.contains(i)){
                 ans.add(i);
             }
         }
-        return ans;  
+        return ans;
+                 
     }
 }
