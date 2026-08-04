@@ -9,7 +9,7 @@ class Solution {
         for(int x : nums){
             set.add(x);
         }
-        for(int i=small; i<larg; i++){
+        for(int i=small; i<=larg; i++){
             if(!set.contains(i)){
                 ans.add(i);
             }
