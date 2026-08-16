@@ -3,7 +3,7 @@ import java.util.Arrays;
 class Solution {
     public int[] kWeakestRows(int[][] mat, int k) {
         int m = mat.length;
-        int[][] rowStrengths = new int[m][2]; // [soldierCount, rowIndex]
+        int[][] rowStrengths = new int[m][2]; 
 
         for (int i = 0; i < m; i++) {
             rowStrengths[i][0] = countSoldiers(mat[i]);
